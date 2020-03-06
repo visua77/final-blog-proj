@@ -7,7 +7,6 @@ import './css/styles.css'
 export const App = () => {
   return (
     <div>
-
       <Header />
       <BlogPost />
       <BlogPost />

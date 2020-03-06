@@ -1,5 +1,5 @@
 * {
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,9 +12,10 @@ body {
 
 h1 {
     color: white;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-family: 'Montserrat', sans-serif;
     margin-left: 60px;
+    margin-top: 80px;
     letter-spacing: 5px;
 }
 
@@ -30,8 +31,16 @@ h2 {
     margin: 0;
     padding: 20px;
     width: 100%;
-    height: 200px;
-    background-color: rgba(0, 0, 0, .50);
+    height: 300px;
+    /* fix path later */
+    background-image: url("header.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    border-bottom: 3px solid white;
 }
 
 .footer-wrapper {
@@ -46,6 +55,7 @@ h2 {
     margin: 30px auto;
     width: 500px;
     height: auto;
+    border-radius: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 60px;
