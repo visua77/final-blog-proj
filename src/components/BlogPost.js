@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 
-export const BlogPost = (props) => {
-  const { message, createdAt, _id } = props.thought
+const URL = 'https://happy-happty.herokuapp.com/'
+
+export const BlogPost = () => {
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    fetch(URL)
+      .then((res) => res.json())
+      .then((json) => {
+        setPosts(json)
+      })
+  }, [])
+
   return (
-    <div className="card">
-      <article>
-        <h1>{message}</h1>
-        {/* <p className="theDate">{moment(createdAt).fromNow()}</p> */}
-      </article>
-    </div>
+
+    <article>
+      {posts.map((onepost) => (
+        <div className="card"><p>Fetching data from the happythoughts API just to check the connection works</p><h2>{onepost.message}</h2></div>
+      ))}
+
+    </article>
+
   )
 }
 
