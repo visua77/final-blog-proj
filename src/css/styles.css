@@ -35,7 +35,7 @@ h2 {
     width: 100%;
     height: 300px;
     /* fix path later */
-    background-image: url("header.jpg");
+    background-image: url("header.png");
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
