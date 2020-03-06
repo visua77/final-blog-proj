@@ -45,6 +45,15 @@ h2 {
     border-bottom: 3px solid white;
 }
 
+.soc-media {
+    position: relative;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    top: -260px;
+    right: -1250px;
+    color: white;
+}
+
 .card {
     margin: 30px auto;
     width: 750px;
