@@ -18,9 +18,13 @@ export const BlogPost = () => {
 
     <article>
       {posts.map((onepost) => (
-        <div className="card"><p>Fetching data from the happythoughts API just to check the connection works</p><h2>{onepost.message}</h2></div>
+        <div className="card" key="_id">
+          <h2>{onepost.message}</h2>
+          <p>Fetching data from the happythoughts API just to check the connection works</p>
+          <h3>Hearts: {onepost.hearts}</h3>
+          <p>{moment(onepost.createdAt).fromNow()}</p>
+        </div>
       ))}
-
     </article>
 
   )
