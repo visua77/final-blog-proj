@@ -15,17 +15,19 @@ export const BlogPost = () => {
   }, [])
 
   return (
-
-    <article>
-      {posts.map((onepost) => (
-        <div className="card" key="_id">
-          <h2>{onepost.message}</h2>
-          <p>Fetching data from the happythoughts API just to check the connection works</p>
-          <h3>Hearts: {onepost.hearts}</h3>
-          <p>{moment(onepost.createdAt).fromNow()}</p>
-        </div>
-      ))}
-    </article>
+    <div>
+      {/* <h3>Latest posts:</h3> */}
+      <article>
+        {posts.map((onepost) => (
+          <div className="card" key="_id">
+            <h2>{onepost.message}</h2>
+            <p>Fetching data from the happythoughts API just to check that the connection works</p>
+            <h3>Hearts: {onepost.hearts}</h3>
+            <p>{moment(onepost.createdAt).fromNow()}</p>
+          </div>
+        ))}
+      </article>
+    </div>
 
   )
 }
