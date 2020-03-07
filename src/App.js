@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { BlogPost } from './components/BlogPost'
+import { BlogPosts } from './components/BlogPosts'
+import { ShowPost } from './components/ShowPost'
 import { Header } from './components/Header'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
@@ -14,7 +15,13 @@ export const App = () => {
           <Route path="/" exact>
             <Header />
             <Nav />
-            <BlogPost />
+            <BlogPosts />
+            <Footer />
+          </Route>
+          <Route path="/blog/:slug" exact>
+            <Header />
+            <Nav />
+            <ShowPost />
             <Footer />
           </Route>
         </Switch>
