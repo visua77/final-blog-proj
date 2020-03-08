@@ -21,7 +21,7 @@ export const ShowPost = () => {
   console.log(postMatch)
   return (
     <div className="card">
-      {postMatch.message}
+      {postMatch && postMatch.message}
     </div>
   )
 }
