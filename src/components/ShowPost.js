@@ -7,7 +7,7 @@ export const ShowPost = () => {
   const params = useParams()
   const [post, setPost] = useState([])
 
-  console.log(params)
+  //console.log(params)
 
   useEffect(() => {
     fetch(URL)
@@ -16,7 +16,8 @@ export const ShowPost = () => {
         setPost(json)
       })
   }, [])
-  const postMatch = post.find((id) => id.slug === params.slug)
+  //console.log(post)
+  const postMatch = post.find((id) => id._id === params.slug)
   console.log(postMatch)
   return (
     <div className="card">
