@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { About } from './components/About'
 import { BlogPosts } from './components/BlogPosts'
 import { ShowPost } from './components/ShowPost'
 import { Header } from './components/Header'
@@ -16,6 +17,12 @@ export const App = () => {
             <Header />
             <Nav />
             <BlogPosts />
+            <Footer />
+          </Route>
+          <Route path="/about" exact>
+            <Header />
+            <Nav />
+            <About />
             <Footer />
           </Route>
           <Route path="/blog/:slug" exact>
