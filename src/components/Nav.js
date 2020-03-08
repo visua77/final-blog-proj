@@ -8,7 +8,7 @@ export const Nav = () => {
       <span className="nav-items">Places</span>
       <span className="nav-items">Accomodation</span>
       <span className="nav-items">Restaurants</span>
-      <span className="nav-items">Contact</span>
+      <span className="nav-items"><Link to="/contact/">Contact</Link></span>
     </div>
   )
 }

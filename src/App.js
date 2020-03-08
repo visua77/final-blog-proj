@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { About } from './components/About'
+import { Contact } from './components/Contact'
 import { BlogPosts } from './components/BlogPosts'
 import { ShowPost } from './components/ShowPost'
 import { Header } from './components/Header'
@@ -29,6 +30,12 @@ export const App = () => {
             <Header />
             <Nav />
             <ShowPost />
+            <Footer />
+          </Route>
+          <Route path="/contact" exact>
+            <Header />
+            <Nav />
+            <Contact />
             <Footer />
           </Route>
         </Switch>
