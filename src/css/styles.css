@@ -134,3 +134,52 @@ a:visited {
     background-color: silver;
     text-align: center;
 }
+
+article {
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    width: 600px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, .5);
+    border: 1px solid pink;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+button.theHeart {
+    font-size: 1.6rem;
+    border: 1 px solid black;
+    border-radius: 50%;
+    background-color: silver;
+}
+
+span {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    padding: 0px;
+}
+
+.theDate {
+    text-align: right;
+}
+
+.noLikes {
+    position: relative;
+    left: 4px;
+}
+
+textarea {
+    font-size: 1.5rem;
+    height: 80px;
+    width: 400px;
+    resize: none;
+}
+
+button.theSubmit {
+    padding: 7px;
+    font-size: 1.4rem;
+    border: 1 px solid black;
+    border-radius: 15px;
+    background-color: pink;
+}

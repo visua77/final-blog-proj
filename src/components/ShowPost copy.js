@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { HappyThought } from './HappyThought'
-import { HappyForm } from './HappyForm'
 import moment from 'moment'
+import { CommentsForm } from './CommentsForm'
+import { Comments } from './Comments'
 
-//const URL = 'https://happy-happty.herokuapp.com/'
-const URL = 'http://localhost:8080/'
+const URL = 'https://happy-happty.herokuapp.com/'
 
 export const ShowPost = () => {
   const params = useParams()
@@ -50,21 +49,28 @@ export const ShowPost = () => {
   }, [])
   //console.log(post)
   const postMatch = post.find((id) => id._id === params.slug)
-
+  //console.log(postMatch)
   return (
     <div>
       <div className="card">
-        <h3>{postMatch && postMatch.headline}</h3>
-        <p>{postMatch && postMatch.text}</p>
+        <h3>{postMatch && postMatch.message}</h3>
+        <p>Likes: {postMatch && postMatch.hearts}</p>
         <p>Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>
-
       <div className="card">
-        <HappyForm onFormSubmit={handleFormSubmit} />
-        {thoughts.map(thought => (
-        <HappyThought key={thought._id} thought={thought} onLike={onLike} />
-        ))}
-      </div>
+        <CommentsForm onFormSubmit={handleFormSubmit} />
+        <Comments /></div>
     </div>
+
   )
 }
+
+
+/* return (
+  <div className="mainContainer">
+    <HappyForm onFormSubmit={handleFormSubmit} />
+    {thoughts.map(thought => (
+      <HappyThought key={thought._id} thought={thought} onLike={onLike} />
+    ))}
+  </div>
+) */
