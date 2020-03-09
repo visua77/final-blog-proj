@@ -4,8 +4,8 @@ import { HappyThought } from './HappyThought'
 import { HappyForm } from './HappyForm'
 import moment from 'moment'
 
-//const URL = 'https://happy-happty.herokuapp.com/'
-const URL = 'http://localhost:8080/'
+const URL = 'https://the-soller-blog.herokuapp.com/'
+//const URL = 'http://localhost:8080/'
 
 export const ShowPost = () => {
   const params = useParams()

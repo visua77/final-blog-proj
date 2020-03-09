@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 import PlaceholderImg from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
 
-//const URL = 'https://happy-happty.herokuapp.com/'
-const URL = 'http://localhost:8080/'
+const URL = 'https://the-soller-blog.herokuapp.com/'
+//const URL = 'http://localhost:8080/'
 
 export const BlogPosts = () => {
   const [posts, setPosts] = useState([])
