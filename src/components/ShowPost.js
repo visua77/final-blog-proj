@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { HappyThought } from './HappyThought'
 import { HappyForm } from './HappyForm'
+import PlaceholderImg from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
 import moment from 'moment'
 
 const URL = 'https://the-soller-blog.herokuapp.com/'
@@ -54,7 +55,7 @@ export const ShowPost = () => {
   return (
     <div>
       <div className="card">
-        <h3>{postMatch && postMatch.headline}</h3>
+        <img src={PlaceholderImg} className="img-posts-large" /><h3>{postMatch && postMatch.headline}</h3>
         <p>{postMatch && postMatch.text}</p>
         <p>Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>

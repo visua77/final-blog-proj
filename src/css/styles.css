@@ -41,6 +41,14 @@ a:visited {
 
 .img-posts {
     height: 400px;
+    float: right;
+    margin-left: 30px;
+    border: 10px solid white;
+}
+
+.img-posts-large {
+    height: 430px;
+    float: right;
     margin-left: 30px;
     border: 10px solid white;
 }
