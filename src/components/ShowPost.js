@@ -12,11 +12,15 @@ const URL = 'http://localhost:8080/blogposts'
 export const ShowPost = () => {
   const params = useParams()
   const [post, setPost] = useState([])
+  const [commentBody, setCommentBody] = useState('')
 
   const [thoughts, setThoughts] = useState([])
   const [postedMessage, setPostedMessage] = useState('')
 
-  console.log(params)
+  const tester = `http://localhost:8080/blogposts/${params.slug}/comments`
+  console.log(tester)
+
+  //console.log(params)
 
   useEffect(() => {
     fetch(URL)
@@ -24,14 +28,14 @@ export const ShowPost = () => {
       .then(json => setThoughts(json))
   }, [postedMessage])
 
-  const handleFormSubmit = (message) => {
-    fetch(`http://localhost:8080/blogposts/${params}/comments`, {
+  const handleSubmit = () => {
+    fetch(`http://localhost:8080/blogposts/${params.slug}/comments`, {
       method: 'POST',
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message: commentBody }),
       headers: { 'Content-Type': 'application/json' }
     })
-      .then(() => setPostedMessage(message))
-    console.log(message)
+      .then(() => setPostedMessage(commentBody))
+    console.log(commentBody)
   }
 
   useEffect(() => {
@@ -54,7 +58,11 @@ export const ShowPost = () => {
       </div>
 
       <div className="card">
-        <HappyForm onFormSubmit={handleFormSubmit} />
+        <form onSubmit={handleSubmit}>
+          <textarea rows="3" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
+        </form>
+        <p><button className="theSubmit" type="submit" onClick={handleSubmit}>Please leave a comment</button></p>
+        {/* <HappyForm onFormSubmit={handleFormSubmit} /> */}
         {/*  {thoughts.map(thought => (
           <HappyThought key={thought._id} thought={thought} onLike={onLike} />
         ))} */}
