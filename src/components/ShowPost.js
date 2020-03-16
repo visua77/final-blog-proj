@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
-import { HappyThought } from './HappyThought'
-import { HappyForm } from './HappyForm'
 import PlaceholderImg from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
 
 //const URL = 'https://the-soller-blog.herokuapp.com/'
 const URL = 'http://localhost:8080/blogposts'
+
 //const URL2 = 'http://localhost:8080/blogposts/:id/comments'
 
 export const ShowPost = () => {
   const params = useParams()
   const [post, setPost] = useState([])
   const [commentBody, setCommentBody] = useState('')
-
-  const [thoughts, setThoughts] = useState([])
+  const [commentArray, setCommentArray] = useState([])
   const [postedMessage, setPostedMessage] = useState('')
 
   const tester = `http://localhost:8080/blogposts/${params.slug}/comments`
   console.log(tester)
 
   //console.log(params)
-
-  useEffect(() => {
-    fetch(URL)
-      .then(res => res.json())
-      .then(json => setThoughts(json))
-  }, [postedMessage])
 
   const handleSubmit = () => {
     fetch(`http://localhost:8080/blogposts/${params.slug}/comments`, {
@@ -37,6 +29,16 @@ export const ShowPost = () => {
       .then(() => setPostedMessage(commentBody))
     console.log(commentBody)
   }
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/blogposts/${params.slug}`)
+      .then((res) => res.json())
+      .then((json) => {
+        setCommentArray(json.comments)
+      })
+  }, [])
+
+  console.log(commentArray.comments)
 
   useEffect(() => {
     fetch(URL)
@@ -62,10 +64,11 @@ export const ShowPost = () => {
           <textarea rows="3" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
         </form>
         <p><button className="theSubmit" type="submit" onClick={handleSubmit}>Please leave a comment</button></p>
-        {/* <HappyForm onFormSubmit={handleFormSubmit} /> */}
-        {/*  {thoughts.map(thought => (
-          <HappyThought key={thought._id} thought={thought} onLike={onLike} />
-        ))} */}
+
+        <div>{commentArray.map((thought) => (
+          <p>{thought.message}</p>
+        ))}
+        </div>
       </div>
     </div>
   )
