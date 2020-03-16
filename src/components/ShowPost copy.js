@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
-import { CommentsForm } from './CommentsForm'
-import { Comments } from './Comments'
+import { HappyThought } from './HappyThought'
+import { HappyForm } from './HappyForm'
+import PlaceholderImg from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
 
-const URL = 'https://happy-happty.herokuapp.com/'
+//const URL = 'https://the-soller-blog.herokuapp.com/'
+const URL = 'http://localhost:8080/blogposts'
+
+const URL2 = 'http://localhost:8080/blogposts/:id/comments'
 
 export const ShowPost = () => {
   const params = useParams()
   const [post, setPost] = useState([])
+  const [post2, setPost2] = useState([])
   const [thoughts, setThoughts] = useState([])
   const [postedMessage, setPostedMessage] = useState('')
 
@@ -19,13 +24,30 @@ export const ShowPost = () => {
   }, [postedMessage])
 
   const handleFormSubmit = (message) => {
-    fetch(URL, {
+    fetch(URL2, {
       method: 'POST',
       body: JSON.stringify({ message }),
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => setPostedMessage(message))
   }
+
+  useEffect(() => {
+    fetch(`/blogposts/${params.id}`)
+      .then((res) => res.json())
+      .then((json) => setPost2(json))
+  }, [])
+
+/*   const handleSubmit = () => {
+    fetch(`/blogposts/${params.id}/comments`, {
+      method: 'POST',
+      body: JSON.stringify({ comment: commentBody })
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        // json === comment from the db
+      })
+  } */
 
   const onLike = (thoughtId) => {
     console.log('logging sum shit', thoughtId)
@@ -49,28 +71,21 @@ export const ShowPost = () => {
   }, [])
   //console.log(post)
   const postMatch = post.find((id) => id._id === params.slug)
-  //console.log(postMatch)
+
   return (
     <div>
       <div className="card">
-        <h3>{postMatch && postMatch.message}</h3>
-        <p>Likes: {postMatch && postMatch.hearts}</p>
+        <img src={PlaceholderImg} className="img-posts-large" alt="img" /><h3>{postMatch && postMatch.headline}</h3>
+        <p>{postMatch && postMatch.text}</p>
         <p>Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>
-      <div className="card">
-        <CommentsForm onFormSubmit={handleFormSubmit} />
-        <Comments /></div>
-    </div>
 
+      <div className="card">
+        <HappyForm onFormSubmit={handleFormSubmit} />
+       {/*  {thoughts.map(thought => (
+          <HappyThought key={thought._id} thought={thought} onLike={onLike} />
+        ))} */}
+      </div>
+    </div>
   )
 }
-
-
-/* return (
-  <div className="mainContainer">
-    <HappyForm onFormSubmit={handleFormSubmit} />
-    {thoughts.map(thought => (
-      <HappyThought key={thought._id} thought={thought} onLike={onLike} />
-    ))}
-  </div>
-) */
