@@ -49,6 +49,7 @@ a:visited {
 
 .img-posts-large {
     height: 300px;
+    width: 300px;
     float: right;
     margin-left: 30px;
     border: 10px solid white;

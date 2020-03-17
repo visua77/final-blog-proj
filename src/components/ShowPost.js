@@ -54,7 +54,7 @@ export const ShowPost = () => {
   return (
     <div>
       <div className="card">
-        <img src={PlaceholderImg} className="img-posts-large" alt="img" /><h3>{postMatch && postMatch.headline}</h3>
+        <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h3>{postMatch && postMatch.headline}</h3>
         <p>{postMatch && postMatch.text}</p>
         <p>Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>
