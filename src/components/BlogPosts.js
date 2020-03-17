@@ -17,10 +17,14 @@ export const BlogPosts = () => {
       })
   }, [])
 
+  const testVar = posts[3]
+  console.log(testVar)
+
   return (
     <div>
-      {/* <h3>Latest posts:</h3> */}
+
       <div>
+
         {posts.map((onepost) => (
           <div className="wrapper-card" key={onepost._id}>
             <div>
@@ -30,7 +34,7 @@ export const BlogPosts = () => {
               <p><Link key={onepost._id} to={`/blog/${onepost._id}`}>Read more</Link></p>
               <p>Created: {moment(onepost.createdAt).fromNow()}</p>
             </div>
-            <div><img src={PlaceholderImg} className="img-posts" /></div>
+            <div><img src={onepost.imgName} className="img-posts" /></div>
           </div>
         ))}
       </div>
