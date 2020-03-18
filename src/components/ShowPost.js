@@ -54,19 +54,20 @@ export const ShowPost = () => {
   return (
     <div>
       <div className="card">
-        <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h3>{postMatch && postMatch.headline}</h3>
+        <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h2>{postMatch && postMatch.headline}</h2>
         <p>{postMatch && postMatch.text}</p>
         <p>Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>
 
       <div className="card">
+        <h3>Comments:</h3>
         <form onSubmit={handleSubmit}>
           <textarea rows="3" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
         </form>
         <p><button className="theSubmit" type="submit" onClick={handleSubmit}>Please leave a comment</button></p>
 
         <div>{commentArray.map((thought) => (
-          <p>{thought.message}</p>
+          <p className="comments">{thought.message}</p>
         ))}
         </div>
       </div>

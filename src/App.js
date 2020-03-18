@@ -4,6 +4,7 @@ import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { BlogPosts } from './components/BlogPosts'
 import { ShowPost } from './components/ShowPost'
+import { Images } from './components/Images'
 import { Header } from './components/Header'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
@@ -30,6 +31,12 @@ export const App = () => {
             <Header />
             <Nav />
             <ShowPost />
+            <Footer />
+          </Route>
+          <Route path="/images" exact>
+            <Header />
+            <Nav />
+            <Images />
             <Footer />
           </Route>
           <Route path="/contact" exact>

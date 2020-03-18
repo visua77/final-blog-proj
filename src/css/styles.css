@@ -33,10 +33,18 @@ a {
 a:hover {
     text-decoration: underline;
     color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .20);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 a:visited {
     color: white;
+}
+
+.mystyle {
+    color: red;
 }
 
 .img-posts {
@@ -101,6 +109,12 @@ a:visited {
     padding-left: 20px;
 }
 
+.nav-items-no {
+    padding-left: 20px;
+    text-decoration: line-through;
+    color: silver;
+}
+
 .card {
     margin: 30px auto;
     width: 80%;
@@ -126,6 +140,32 @@ a:visited {
     box-shadow: 5px 5px rgba(0, 0, 0, .45), 10px 10px 40px rgba(0, 0, 0, .20) inset;
 }
 
+.wrapper-card-img {
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 60px;
+    background-color: rgb(164, 206, 206);
+    box-shadow: 5px 5px rgba(0, 0, 0, .45), 10px 10px 40px rgba(0, 0, 0, .20) inset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-img-flex {
+    width: 25%;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.card-img {
+    width: 85%;
+    border: 5px solid white;
+}
+
 .wrapper-post {
     display: flex;
     flex-direction: column;
@@ -133,6 +173,12 @@ a:visited {
 
 .about-txt {
     margin-left: 30px;
+}
+
+.comments {
+    background-color: rgb(80, 139, 139);
+    color: white;
+    padding: 10px;
 }
 
 .footer-wrapper {
@@ -189,7 +235,8 @@ textarea {
 button.theSubmit {
     padding: 7px;
     font-size: 1.4rem;
+    color: white;
     border: 1 px solid black;
     border-radius: 15px;
-    background-color: pink;
+    background-color: darkslategrey;
 }
