@@ -5,14 +5,11 @@ import moment from 'moment'
 //const URL = 'https://the-soller-blog.herokuapp.com/'
 const URL = 'http://localhost:8080/blogposts'
 
-//const URL2 = 'http://localhost:8080/blogposts/:id/comments'
-
 export const ShowPost = () => {
   const params = useParams()
   const [post, setPost] = useState([])
   const [commentBody, setCommentBody] = useState('')
   const [commentArray, setCommentArray] = useState([])
-  //const [postedMessage, setPostedMessage] = useState('')
 
   const handleSubmit = () => {
     fetch(`http://localhost:8080/blogposts/${params.slug}/comments`, {
@@ -22,9 +19,10 @@ export const ShowPost = () => {
     })
       .then(() => setCommentBody(''))
       //.then(() => setCommentArray(json.comments))
-      
+
+    // dirty fix for reloading comments
     window.location.reload(true)
-    //console.log(commentBody)
+
   }
 
   useEffect(() => {
@@ -51,7 +49,11 @@ export const ShowPost = () => {
     <div>
       <div className="card">
         <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h2>{postMatch && postMatch.headline}</h2>
-        <p>{postMatch && postMatch.text}</p>
+        <p className="ingress">{postMatch && postMatch.textOne}</p>
+        <img src={postMatch && postMatch.imgName2} className="img-posts-large-2" alt="img" />
+        <p>{postMatch && postMatch.textTwo}</p>
+        <img src={postMatch && postMatch.imgName3} className="img-posts-large" alt="img" />
+        <p>{postMatch && postMatch.textThree}</p>
         <p className="white-p">Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
       </div>
 

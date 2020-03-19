@@ -10,13 +10,12 @@ export const Images = () => {
 
   const showImg = () => {
     if (img) {
-    document.getElementById('showImg').innerHTML = `<img src=${img} width="400" height=400>`
-    document.getElementById('showImg').style.visibility = 'visible'
+      document.getElementById('showImg').innerHTML = `<img src=${img} width="400" height=400>`
+      document.getElementById('showImg').style.visibility = 'visible'
     }
     else {
       alert('error')
     }
- 
 
 }
 
