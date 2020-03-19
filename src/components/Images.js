@@ -4,6 +4,21 @@ const URL = 'http://localhost:8080/images'
 
 export const Images = () => {
   const [images, setImages] = useState([])
+  const [img, setImg] = useState('')
+
+  console.log(img)
+
+  const showImg = () => {
+    if (img) {
+    document.getElementById('showImg').innerHTML = `<img src=${img} width="400" height=400>`
+    document.getElementById('showImg').style.visibility = 'visible'
+    }
+    else {
+      alert('error')
+    }
+ 
+
+}
 
   useEffect(() => {
     fetch(URL)
@@ -15,23 +30,13 @@ export const Images = () => {
 
   return (
     <div className="wrapper-card-img">
+      <div id="showImg"></div>
       {images.map((img) => (
-        <div key={img._id} className="card-img-flex">
-          <img src={img.imgUrl} className="card-img" />
+        <div key={img._id} className="card-img-flex" onClick={(e) => setImg(img.imgUrl)}>
+          <img src={img.imgUrl} className="card-img" onClick={showImg} alt={img.imgUrl} /> 
         </div>
       ))}
     </div>
   )
 }
 
-{ /* <div className="postersCont">
-  {posters.map((poster) => (
-    <div className="posters" key={poster.id}>
-      <Link to={`details/${poster.id}`}><img src={`http://image.tmdb.org/t/p/w342/${poster.poster_path}`} alt="" /></Link>
-      <div className="posterInfo">{poster.original_title}<br></br>
-        {poster.release_date}
-      </div>
-
-    </div>
-  ))}
-</div> */ }

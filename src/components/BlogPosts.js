@@ -29,7 +29,7 @@ export const BlogPosts = () => {
           <div className="wrapper-card" key={onepost._id}>
             <div>
               <h2>{onepost.headline}</h2>
-              <p>{onepost.text}</p>
+              <div className="txt-cont">{onepost.text}</div>
               {/* <h3>Hearts: {onepost.hearts}</h3> */}
               <p><Link key={onepost._id} to={`/blog/${onepost._id}`}>Read more</Link></p>
               <p>Created: {moment(onepost.createdAt).fromNow()}</p>
