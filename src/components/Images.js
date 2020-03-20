@@ -15,15 +15,17 @@ export const Images = () => {
       })
   }, [])
 
-  const setCurrentImg = (e) => {
-    currentImg(e.currentTarget)
+  const setCurrentImg = (imageProps) => {
+    currentImg(imageProps)
     console.log('img', img)
-
   }
 
   return (
     <div className="wrapper-card-img">
-      <div className="myWrapper"><img src={img.src} /></div>
+      {img && (
+        <div className="myWrapper"><div><img src={img.src} className="open-img" alt={img.src} />
+          <div className="close-but"><button type="button" onClick={event => setCurrentImg('')} className="my-but">close</button></div></div>
+        </div> )}
 
       {
         images.map((img) => (

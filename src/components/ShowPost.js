@@ -18,7 +18,6 @@ export const ShowPost = () => {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => setCommentBody(''))
-      //.then(() => setCommentArray(json.comments))
 
     // dirty fix for reloading comments
     window.location.reload(true)

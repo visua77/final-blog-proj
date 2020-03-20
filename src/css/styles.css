@@ -199,9 +199,30 @@ a:visited {
 
 .myWrapper {
     position: absolute;
-    background-color: white;
-    width: 200px;
-    height: 200px;
+}
+
+.open-img {
+    position: relative;
+    left: 250px;
+    top: 100px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 35%;
+}
+
+.close-but {
+    position: absolute;
+    font-size: 2.2rem;
+    padding: 5px;
+    left: 580px;
+    top: 110px;
+}
+
+.my-but {
+    font-size: 1rem;
+    border: 1px solid silver;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .card-img {
@@ -210,9 +231,9 @@ a:visited {
 }
 
 .card-img:hover {
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    border: 5px solid white;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: .65;
 }
 
 .wrapper-post {
