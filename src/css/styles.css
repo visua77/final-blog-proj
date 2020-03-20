@@ -197,6 +197,13 @@ a:visited {
     align-items: space-between;
 }
 
+.myWrapper {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
 .card-img {
     width: 95%;
     border: 5px solid white;
