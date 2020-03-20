@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
+import Image from '../img/blogpost6.jpg' // relative path to image
 
 export const About = () => {
   return (
