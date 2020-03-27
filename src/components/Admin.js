@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const URL = 'http://localhost:8080/blogposts'
+const URL = 'https://the-soller-blog.herokuapp.com/blogposts'
 
 export const Admin = () => {
   const [commentBody, setCommentBody] = useState('')
