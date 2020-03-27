@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Image } from './Image'
 
-const URL = 'http://localhost:8080/images'
+const URL = 'https://the-soller-blog.herokuapp.com/images'
 
 export const Images = () => {
   const [images, setImages] = useState([])
