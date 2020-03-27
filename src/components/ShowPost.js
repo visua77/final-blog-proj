@@ -12,7 +12,7 @@ export const ShowPost = () => {
   const [commentArray, setCommentArray] = useState([])
 
   const handleSubmit = () => {
-    fetch(`http://localhost:8080/blogposts/${params.slug}/comments`, {
+    fetch(`https://the-soller-blog.herokuapp.com/blogposts/${params.slug}/comments`, {
       method: 'POST',
       body: JSON.stringify({ message: commentBody }),
       headers: { 'Content-Type': 'application/json' }
@@ -25,7 +25,7 @@ export const ShowPost = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:8080/blogposts/${params.slug}`)
+    fetch(`https://the-soller-blog.herokuapp.com/blogposts/${params.slug}`)
       .then((res) => res.json())
       .then((json) => {
         setCommentArray(json.comments)
