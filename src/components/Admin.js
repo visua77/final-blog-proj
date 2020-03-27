@@ -17,7 +17,13 @@ export const Admin = () => {
       body: JSON.stringify({ headline: commentHeader, textOne: commentBody, textTwo: commentBody2, textThree: commentBody3, imgName: imgUrl, imgName2: imgUrl2, imgName3: imgUrl3 }),
       headers: { 'Content-Type': 'application/json' }
     })
+      .then(() => setCommentHeader(''))
       .then(() => setCommentBody(''))
+      .then(() => setCommentBody2(''))
+      .then(() => setCommentBody3(''))
+      .then(() => setImgUrl(''))
+      .then(() => setImgUrl2(''))
+      .then(() => setImgUrl3(''))
   }
 
   return (

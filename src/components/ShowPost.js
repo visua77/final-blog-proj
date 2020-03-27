@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
 
-//const URL = 'https://the-soller-blog.herokuapp.com/'
-const URL = 'http://localhost:8080/blogposts'
+const URL = 'https://the-soller-blog.herokuapp.com/blogposts'
+//const URL = 'http://localhost:8080/blogposts'
 
 export const ShowPost = () => {
   const params = useParams()
