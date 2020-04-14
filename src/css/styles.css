@@ -342,6 +342,12 @@ button.theSubmit {
         letter-spacing: 5px;
         background-color: rgba(0, 0, 0, .20);
     }
+    h2 {
+        color: black;
+        margin-top: -5px;
+        font-size: 2rem;
+        font-weight: 900;
+    }
     .wrapper-card {
         display: flex;
         flex-direction: column;
@@ -349,28 +355,28 @@ button.theSubmit {
         width: 80%;
         height: auto;
         border-radius: 10px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        padding: 60px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 30px;
         background-color: rgb(164, 206, 206);
         box-shadow: 5px 5px rgba(0, 0, 0, .45), 10px 10px 40px rgba(0, 0, 0, .20) inset;
     }
     .img-posts {
         height: 0;
         float: none;
-        visibility: hidden;
+        visibility: visible;
         overflow: hidden;
         margin-left: 0;
-        border: 10px solid white;
+        border: none;
     }
     .header-wrapper {
         margin: 0;
         padding: 20px;
         width: 100%;
-        height: 300px;
+        height: 250px;
         /* fix path later */
         background-image: url("header.png");
-        background-position: center;
+        background-position: left;
         /* Center the image */
         background-repeat: no-repeat;
         /* Do not repeat the image */
@@ -387,13 +393,11 @@ button.theSubmit {
     }
     .main-nav {
         visibility: hidden;
+        overflow: hidden;
         margin: 0;
-        padding: 10px;
-        width: 0%;
+        padding: 0;
+        width: 0;
         height: 0;
-        padding-left: 70px;
-        color: white;
-        background-color: darkslategrey;
-        border-bottom: 3px solid white;
+        padding-left: 0px;
     }
 }
