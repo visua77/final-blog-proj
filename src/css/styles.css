@@ -348,9 +348,33 @@ button.theSubmit {
         font-size: 2rem;
         font-weight: 900;
     }
+    h3 {
+        color: black;
+        margin-top: -5px;
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+    textarea {
+        font-size: 1.5rem;
+        height: 180px;
+        width: 100%;
+        border-radius: 7px;
+        resize: none;
+    }
     .wrapper-card {
         display: flex;
         flex-direction: column;
+        margin: 30px auto;
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 30px;
+        background-color: rgb(164, 206, 206);
+        box-shadow: 5px 5px rgba(0, 0, 0, .45), 10px 10px 40px rgba(0, 0, 0, .20) inset;
+    }
+    .card {
         margin: 30px auto;
         width: 80%;
         height: auto;
@@ -371,6 +395,22 @@ button.theSubmit {
         padding: 0;
         margin: 0;
         border: 1px solid red;
+    }
+    .img-posts-large {
+        height: 250px;
+        width: 200px;
+        float: none;
+        margin-bottom: 20px;
+        margin-left: 0;
+        border: 10px solid white;
+    }
+    .img-posts-large-2 {
+        height: 250px;
+        width: 200px;
+        float: none;
+        margin-bottom: 20px;
+        margin-right: 0;
+        border: 10px solid white;
     }
     .header-wrapper {
         margin: 0;
