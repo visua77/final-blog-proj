@@ -330,3 +330,70 @@ button.theSubmit {
     width: 400px;
     height: 400px;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        color: white;
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        padding: 10px;
+        margin-left: 20px;
+        margin-top: 40px;
+        letter-spacing: 5px;
+        background-color: rgba(0, 0, 0, .20);
+    }
+    .wrapper-card {
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 60px;
+        background-color: rgb(164, 206, 206);
+        box-shadow: 5px 5px rgba(0, 0, 0, .45), 10px 10px 40px rgba(0, 0, 0, .20) inset;
+    }
+    .img-posts {
+        height: 0;
+        float: none;
+        visibility: hidden;
+        overflow: hidden;
+        margin-left: 0;
+        border: 10px solid white;
+    }
+    .header-wrapper {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        height: 300px;
+        /* fix path later */
+        background-image: url("header.png");
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
+    }
+    .soc-media {
+        position: relative;
+        font-size: 2rem;
+        letter-spacing: 15px;
+        margin-left: 10px;
+        top: 0px;
+        color: white;
+    }
+    .main-nav {
+        visibility: hidden;
+        margin: 0;
+        padding: 10px;
+        width: 0%;
+        height: 0;
+        padding-left: 70px;
+        color: white;
+        background-color: darkslategrey;
+        border-bottom: 3px solid white;
+    }
+}
