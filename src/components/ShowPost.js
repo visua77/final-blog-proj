@@ -23,7 +23,6 @@ export const ShowPost = () => {
 
     // dirty fix for reloading comments
     //window.location.reload(true)
-
   }
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export const ShowPost = () => {
       .then((json) => {
         setCommentArray(json.comments)
       })
-  }, [setCommentArray])
+  }, [commentArray])
 
   useEffect(() => {
     fetch(URL)
@@ -42,11 +41,11 @@ export const ShowPost = () => {
       })
   }, [])
 
-  //const postMatch = post.find((id) => id._id === params.slug)
+  const postMatch = post.find((id) => id._id === params.slug)
 
   return (
     <div>
-{/*       <div className="card">
+      <div className="card">
         <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h2>{postMatch && postMatch.headline}</h2>
         <p className="ingress">{postMatch && postMatch.textOne}</p>
         <img src={postMatch && postMatch.imgName2} className="img-posts-large-2" alt="img" />
@@ -54,7 +53,7 @@ export const ShowPost = () => {
         <img src={postMatch && postMatch.imgName3} className="img-posts-large" alt="img" />
         <p>{postMatch && postMatch.textThree}</p>
         <p className="white-p">Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
-      </div> */}
+      </div> 
 
       <div className="card">
         <h3>Please leave a comment:</h3>
