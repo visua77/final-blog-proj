@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const changeColor = () => {
-  
-  const element = document.getElementById('01')
+
+  //const element = document.getElementById('01')
   // element.style.color = 'red'
 
 }

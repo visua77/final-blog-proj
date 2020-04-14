@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
-import PlaceholderImg from '../img/73495182_10156774359523473_6779904046250590208_o.jpg' // relative path to image
 
 const URL = 'https://the-soller-blog.herokuapp.com/blogposts'
 //const URL = 'http://localhost:8080/blogposts'
@@ -31,7 +30,7 @@ export const BlogPosts = () => {
               <p><Link key={onepost._id} to={`/blog/${onepost._id}`}>Read more</Link></p>
               <p>Created: {moment(onepost.createdAt).fromNow()}</p>
             </div>
-            <div className="img-empty"><img src={onepost.imgName} className="img-posts" /></div>
+            <div className="img-empty"><img src={onepost.imgName} className="img-posts" alt="img" /></div>
           </div>
         ))}
       </div>
