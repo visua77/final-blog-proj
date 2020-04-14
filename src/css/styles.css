@@ -364,10 +364,13 @@ button.theSubmit {
     .img-posts {
         height: 0;
         float: none;
-        visibility: visible;
+        visibility: hidden;
         overflow: hidden;
         margin-left: 0;
         border: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid red;
     }
     .header-wrapper {
         margin: 0;
@@ -399,5 +402,8 @@ button.theSubmit {
         width: 0;
         height: 0;
         padding-left: 0px;
+    }
+    .img-empty {
+        height: 0;
     }
 }

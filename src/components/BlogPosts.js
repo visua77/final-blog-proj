@@ -22,19 +22,16 @@ export const BlogPosts = () => {
 
   return (
     <div>
-
       <div>
-
         {posts.map((onepost) => (
           <div className="wrapper-card" key={onepost._id}>
             <div>
               <h2>{onepost.headline}</h2>
               <div className="txt-cont">{onepost.textOne}</div>
-
               <p><Link key={onepost._id} to={`/blog/${onepost._id}`}>Read more</Link></p>
               <p>Created: {moment(onepost.createdAt).fromNow()}</p>
             </div>
-            <div><img src={onepost.imgName} className="img-posts" /></div>
+            <div className="img-empty"><img src={onepost.imgName} className="img-posts" /></div>
           </div>
         ))}
       </div>
