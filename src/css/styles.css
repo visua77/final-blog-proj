@@ -50,6 +50,14 @@ p.p-bg {
     padding: 5px;
 }
 
+p.white-p {
+    color: white;
+    display: inline;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, .25);
+    padding: 5px;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -81,11 +89,6 @@ a:visited {
     overflow: hidden;
 }
 
-.white-p {
-    color: white;
-    font-weight: 700;
-}
-
 .ingress {
     color: white;
     font-weight: 700;
@@ -107,6 +110,7 @@ a:visited {
     float: right;
     margin-bottom: 20px;
     margin-left: 30px;
+    margin-top: -5px;
     border: 10px solid white;
 }
 
@@ -116,6 +120,7 @@ a:visited {
     float: left;
     margin-bottom: 20px;
     margin-right: 30px;
+    margin-top: -5px;
     border: 10px solid white;
 }
 

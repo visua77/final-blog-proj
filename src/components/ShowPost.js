@@ -43,7 +43,7 @@ export const ShowPost = () => {
   return (
     <div>
       <div className="card">
-        <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h2>{postMatch && postMatch.headline}</h2>
+        <img src={postMatch && postMatch.imgName} className="img-posts-large" alt="img" /><h2 className="h2-posts">{postMatch && postMatch.headline}</h2>
         <p className="ingress">{postMatch && postMatch.textOne}</p>
         <img src={postMatch && postMatch.imgName2} className="img-posts-large-2" alt="img" />
         <p>{postMatch && postMatch.textTwo}</p>
