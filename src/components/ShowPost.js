@@ -20,9 +20,6 @@ export const ShowPost = () => {
     })
 
       .then(() => setCommentBody(''))
-
-    // dirty fix for reloading comments
-    //window.location.reload(true)
   }
 
   useEffect(() => {
@@ -53,7 +50,7 @@ export const ShowPost = () => {
         <img src={postMatch && postMatch.imgName3} className="img-posts-large" alt="img" />
         <p>{postMatch && postMatch.textThree}</p>
         <p className="white-p">Posted: {postMatch && moment(postMatch.createdAt).fromNow()}</p>
-      </div> 
+      </div>
 
       <div className="card">
         <h3>Please leave a comment:</h3>
