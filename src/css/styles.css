@@ -16,9 +16,11 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
     margin-left: 60px;
+    margin-right: 60px;
     margin-top: 80px;
     letter-spacing: 5px;
     background-color: rgba(0, 0, 0, .20);
+    border-radius: 5px;
 }
 
 h2 {
@@ -28,10 +30,24 @@ h2 {
     font-weight: 900;
 }
 
+h2.h2-posts {
+    color: black;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 5px;
+    margin-top: -5px;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
 h3 {
     color: black;
     font-size: 2rem;
     font-weight: 900;
+}
+
+p.p-bg {
+    background-color: rgba(255, 255, 255, .25);
+    padding: 5px;
 }
 
 a {
@@ -50,6 +66,10 @@ a:hover {
 
 a:visited {
     color: white;
+}
+
+.span-strong {
+    font-weight: 900;
 }
 
 .mystyle {
@@ -77,6 +97,7 @@ a:visited {
     width: 300px;
     float: right;
     margin-left: 30px;
+    margin-top: -5px;
     border: 10px solid white;
 }
 
@@ -117,6 +138,7 @@ a:visited {
     background-repeat: no-repeat;
     /* Do not repeat the image */
     background-size: cover;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, .50) inset;
     /* Resize the background image to cover the entire container */
 }
 
@@ -137,7 +159,8 @@ a:visited {
     padding-left: 70px;
     color: white;
     background-color: darkslategrey;
-    border-bottom: 3px solid white;
+    border-top: 2px solid rgba(255, 255, 255, .15);
+    border-bottom: 3px solid black;
 }
 
 .nav-items {

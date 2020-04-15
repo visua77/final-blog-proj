@@ -25,10 +25,10 @@ export const BlogPosts = () => {
         {posts.map((onepost) => (
           <div className="wrapper-card" key={onepost._id}>
             <div>
-              <h2>{onepost.headline}</h2>
+              <h2 className="h2-posts">{onepost.headline}</h2>
               <div className="txt-cont">{onepost.textOne}</div>
               <p><Link key={onepost._id} to={`/blog/${onepost._id}`}>Read more</Link></p>
-              <p>Created: {moment(onepost.createdAt).fromNow()}</p>
+              <p className="p-bg"><span className="span-strong">Created:</span> {moment(onepost.createdAt).fromNow()}</p>
             </div>
             <div className="img-empty"><img src={onepost.imgName} className="img-posts" alt="img" /></div>
           </div>
