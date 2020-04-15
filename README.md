@@ -1,19 +1,17 @@
-# Technigo React Starter App
+# Technigo bootcamp final project
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+Description: A blog-application made with react on the frontend and express and
+mongoDB for the backend.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+Most proud of: To have made a fullstack-application with my own backend.
 
-## Usage
+Struggles: How to make the comments "stick" to the right post.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Left to-do: 
+-Make endpoints for "tags" like restaurants/accomodation
+-Add auth for admins so they can log in and write new posts(the ui for posting to the DB is already up and running).
+-Build a hamburger-menu on mobile-devices
+-Put some more love into the photo-album
 
-Alternatively, if you don't want a new git repo on your account;
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+
